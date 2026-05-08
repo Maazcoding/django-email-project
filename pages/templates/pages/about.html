@@ -1,0 +1,16 @@
+{% extends 'pages/base.html' %}
+{% block content %}
+    <h1>About Us</h1>
+    <p>Established in <strong>{{ year }}</strong>.</p>
+    
+    <h3>Our Core Features:</h3>
+    <ul>
+        {% for feature in features %}
+            <li>{{ feature|capfirst }}</li>
+        {% endfor %}
+    </ul>
+
+    {% if year > 2020 %}
+        <p>✅ We are a modern, up-to-date company!</p>
+    {% endif %}
+{% endblock %}
